@@ -7,7 +7,7 @@
  * enemigo ataque, además de mantener sus propios valores 
  ******************************************************************************/
 
-public class Enemigo extends Combatiente {
+public abstract class Enemigo extends Combatiente {
 
     /**
      * 

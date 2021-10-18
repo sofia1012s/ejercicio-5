@@ -7,7 +7,7 @@
  * jugadores, para luego utilizarlos en sus subtipos
  ******************************************************************************/
 
-public class Jugador extends Combatiente {
+public abstract class Jugador extends Combatiente {
     /**
      * 
      * @param nombre
