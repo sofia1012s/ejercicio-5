@@ -19,4 +19,20 @@ public class Alienigena extends Enemigo {
         // TODO Auto-generated constructor stub
     }
 
+    /**
+     * @param puntos
+     */
+    public void setPuntosVida(int puntos) {
+        puntosVida = puntos;
+    }
+
+    /**
+     * @param jugador
+     */
+    public void atacar(Jugador jugador) {
+        int vidaJugador = jugador.getPuntosVida();
+        vidaJugador = vidaJugador - poderAtaque;
+        jugador.setPuntosVida(vidaJugador);
+    }
+
 }

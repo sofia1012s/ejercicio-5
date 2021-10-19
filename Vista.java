@@ -70,7 +70,7 @@ public class Vista {
      */
     public int cantidadJugadores() {
         int cantidadJugadores = 0;
-        System.out.println("\nIngrese la cantidad de jugadores que participaran: \n");
+        System.out.println("\nIngrese la cantidad de jugadores que participaran, no pueden ser mas de 3 jugadores: \n");
         cantidadJugadores = scan.nextInt();
 
         return cantidadJugadores;
@@ -80,12 +80,7 @@ public class Vista {
      * @return int
      */
     public int cantidadEnemigos() {
-        int min = 1;
-        int max = 3;
-
-        Random random = new Random();
-
-        int cantidadEnemigos = random.nextInt(max + min) + min;
+        int cantidadEnemigos = (int) (Math.random() * (3 - 1) + 1);
         System.out.println("\nEn esta partida, debe derrotar a " + cantidadEnemigos + " enemigos");
 
         return cantidadEnemigos;
@@ -114,11 +109,11 @@ public class Vista {
     public int tipoJugador() {
         String s = "\nQue tipo de jugador desea?\n" + "\n1) Guerrerx: \n" + "-Puntos de vida: 500\n"
                 + "-Puntos de ataque: 30\n" + "-Items para usar: 1 \n" + "\n2) Exploradorx: \n"
-                + "-Puntos de vida: 200\n" + "-Puntos de ataque: 10\n" + "-Items para usar: 3\n";
+                + "-Puntos de vida: 200\n" + "-Puntos de ataque: 10\n" + "-Items para usar: 3\n" + "\n3) Cazadorx: \n"
+                + "-Puntos de vida: 100\n" + "-Puntos de ataque: 5\n" + "-Items para usar: 2\n"
+                + "Quizas no suene como un jugador poderoso, pero su caracteristica especial es la habilidad de tener un fiel acompanante para ayudarlo\n";
         System.out.println(s);
-
         int opcion = scan.nextInt();
-
         return opcion;
     }
 
@@ -142,6 +137,13 @@ public class Vista {
      */
     public void Alien(String nombre) {
         String s = "\n" + nombre + "\nTipo: Alienigena" + "\n-Puntos Vida: 500" + "\n-Puntos ataque: 40";
+        System.out.println(s);
+    }
+
+    public void raidBoss() {
+        String s = "\n"
+                + "Atenea, Diosa de la sabiduría, la estrategia, la fuerza, el coraje y la valentía, la inspiración, la ley y la justicia."
+                + "\nTipo: Diosa Griega (Es el enemigo más fuerte)" + "\n-Puntos Vida: 1000" + "\n-Puntos ataque: 100";
         System.out.println(s);
     }
 
@@ -223,5 +225,55 @@ public class Vista {
     public void noItems() {
         System.out.println("--------Ya no posee items para utilizar.-------");
     }
+
+    public int tipoBatalla() {
+        int tipoBatalla = 0;
+        String s = "\nQue tipo de batalla desea jugar?\n" + "1. Normal: \n"
+                + "Los jugadores lucharan contra 1,2 o 3 enemigos de tipo normal. No se esperan muchos soldados caidos. \n"
+                + "2. Raid\n"
+                + "Los jugadores lucharan contra la Diosa griega Atenea (una enemiga muy poderosa) la cual estara acompanada de 1 o 2 enemigos de tipo normal. Se esperan muchos soldados caidos, nadie saldra ileso. \n";
+
+        System.out.println(s);
+
+        tipoBatalla = scan.nextInt();
+
+        return tipoBatalla;
+    }
+
+    public String nombreMascota() {
+        String nombre = "";
+        System.out.println("\nComo desea llamar a su acompanante?: \n");
+        nombre = scan.next();
+        return nombre;
+
+    }
+
+    public void datosMascota(String nombreMascota, int puntosVida, int puntosAtaque, int habilidad) {
+        String item = "";
+        if (habilidad == 1) {
+            item = "Restaura 10 puntos de vida a su lider";
+
+        } else if (habilidad == 2) {
+            item = "Ataca con el doble de daño al enemigo del lider";
+        } else if (habilidad == 3) {
+            item = "Ataca al enemigo del lider con su mismo poder de ataque";
+        }
+
+        System.out.println("\nSu mascota " + nombreMascota + " posee las siguientes habilidades: " + "\n-Puntos Vida: "
+                + puntosVida + "\n-Puntos ataque: " + puntosAtaque + "\n-Habilidad especial: " + item);
+
+    }
+
+    public int cantidadEnemigosRaid() {
+        int cantidadEnemigos = (int) (Math.random() * (3 - 1) + 1);
+        System.out.println("\nEl jefe está acompañado por " + cantidadEnemigos + " enemigos");
+
+        return cantidadEnemigos;
+    }
+
+    public void ataqueMascota() {
+        System.out.println("\nLa mascota ataca al enemigo! No se queda atras. ");
+    }
+
 
 }

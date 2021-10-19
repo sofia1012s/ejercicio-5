@@ -25,17 +25,11 @@ public abstract class Enemigo extends Combatiente {
     /** 
      * @param puntos
      */
-    public void setPuntosVida(int puntos){
-        puntosVida = puntos;
-    }
+    public abstract void setPuntosVida(int puntos);
 
     
     /** 
      * @param jugador
      */
-    public void atacar(Jugador jugador) {
-        int vidaJugador = jugador.getPuntosVida();
-        vidaJugador = vidaJugador - poderAtaque;
-        jugador.setPuntosVida(vidaJugador);
-    }
+    public abstract void atacar(Jugador jugador);
 }

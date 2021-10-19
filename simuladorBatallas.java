@@ -10,11 +10,11 @@
 import java.util.ArrayList;
 
 public class simuladorBatallas {
-    private int turno = 0;
+    protected int turno = 0;
 
     private ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     private ArrayList<Enemigo> enemigos = new ArrayList<Enemigo>();
-
+    private ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
     
     /** 
      * @param jugador
@@ -29,6 +29,10 @@ public class simuladorBatallas {
      */
     public void setEnemigos(Enemigo enemigo) {
         enemigos.add(enemigo);
+    }
+
+    public void setMascotas(Mascota mascota) {
+        mascotas.add(mascota);
     }
 
     
