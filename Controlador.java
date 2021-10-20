@@ -177,13 +177,13 @@ public class Controlador {
 
                         else if (tipoBatalla == 2) { // Batalla tipo Raid
 
-                            cantidadEnemigos = view.cantidadEnemigosRaid();
+                            //cantidadEnemigos = view.cantidadEnemigosRaid();
 
                             raidBoss Diosa = new raidBoss(
                                     "Atenea, Diosa de la sabiduría, la estrategia, la fuerza, el coraje y la valentía, la inspiración, la ley y la justicia.",
                                     1000, 100, 0, 10);
 
-                            for (int i = 1; i < cantidadEnemigos+1; i++) {
+                            //for (int i = 1; i < cantidadEnemigos+1; i++) {
                                 simuladorRaid.setEnemigos(Diosa);
                                 view.raidBoss();
 
@@ -207,7 +207,7 @@ public class Controlador {
                                 } else {
                                     view.opcionInvalida();
                                 }
-                            }
+                            //}
 
                             view.inicioBatalla();
 
