@@ -45,6 +45,10 @@ public abstract class Jugador extends Combatiente {
      */
     public abstract int getItems();
 
+    /**
+     * 
+     * @return int
+     */
     public abstract int getTipo();
 
 

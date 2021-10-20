@@ -1,3 +1,12 @@
+/******************************************************************************
+ * Controlador.java
+ * 
+ * @author Sofía Salguero
+ * @version 19/10/2021 
+ * Clase Cazador, se encarga de tener los métodos necesarios para el jugador
+ * de tipo Cazador
+ ******************************************************************************/
+
 import java.util.ArrayList;
 
 public class Cazador extends Jugador {
@@ -8,6 +17,14 @@ public class Cazador extends Jugador {
 
     private ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
 
+    /**
+     * @param nombre
+     * @param puntosVida
+     * @param poderAtaque
+     * @param turno
+     * @param items
+     * @param mascota
+     */
     public Cazador(String nombre, int puntosVida, int poderAtaque, int turno, int items, String mascota) {
         super(nombre, puntosVida, poderAtaque, turno, items,3);
     }
@@ -70,15 +87,27 @@ public class Cazador extends Jugador {
         return items;
     }
 
+    
+    /** 
+     * @param mascota
+     */
     public void setMascota(Mascota mascota) {
         mascotas.add(mascota);
     }
 
+    
+    /** 
+     * @return Mascota
+     */
     public Mascota getMascota() {
         
         return mascotas.get(0);
     }
     
+    
+    /** 
+     * @return int
+     */
     public int getTipo() {
         return 3;
     }

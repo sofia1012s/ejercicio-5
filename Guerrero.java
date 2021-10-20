@@ -78,6 +78,10 @@ public class Guerrero extends Jugador {
         return items;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getTipo() {
         return 2;
     }

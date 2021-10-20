@@ -1,4 +1,12 @@
-import java.util.ArrayList;
+/******************************************************************************
+ * Raid.java
+ * 
+ * @author Sofía Salguero
+ * @version 19/10/2021 
+ * Clase Raidr, se encarga de tener los métodos necesarios para una pelea
+ * tipo Raid
+ ******************************************************************************/
+import java.util.ArrayList; 
 
 public class Raid extends simuladorBatallas {
     protected int turno = 0;

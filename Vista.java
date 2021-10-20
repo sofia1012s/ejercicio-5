@@ -3,7 +3,7 @@
  * Vista.java
  * 
  * @author Sofía Salguero
- * @version 28/09/2021 
+ * @version 19/10/2021 
  * Clase Vista que se encarga de ofrecer la interfaz al usuario para que pueda
  * interactuar con el programa
  ******************************************************************************/
@@ -226,6 +226,10 @@ public class Vista {
         System.out.println("--------Ya no posee items para utilizar.-------");
     }
 
+    
+    /** 
+     * @return int
+     */
     public int tipoBatalla() {
         int tipoBatalla = 0;
         String s = "\nQue tipo de batalla desea jugar?\n" + "1. Normal: \n"
@@ -240,6 +244,10 @@ public class Vista {
         return tipoBatalla;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String nombreMascota() {
         String nombre = "";
         System.out.println("\nComo desea llamar a su acompanante?: \n");
@@ -248,6 +256,13 @@ public class Vista {
 
     }
 
+    
+    /** 
+     * @param nombreMascota
+     * @param puntosVida
+     * @param puntosAtaque
+     * @param habilidad
+     */
     public void datosMascota(String nombreMascota, int puntosVida, int puntosAtaque, int habilidad) {
         String item = "";
         if (habilidad == 1) {
@@ -264,6 +279,10 @@ public class Vista {
 
     }
 
+    
+    /** 
+     * @return int
+     */
     public int cantidadEnemigosRaid() {
         int cantidadEnemigos = (int) (Math.random() * (3 - 1) + 1);
         System.out.println("\nEl jefe está acompañado por " + cantidadEnemigos + " enemigos");

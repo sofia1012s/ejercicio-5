@@ -31,6 +31,10 @@ public class simuladorBatallas {
         enemigos.add(enemigo);
     }
 
+    
+    /** 
+     * @param mascota
+     */
     public void setMascotas(Mascota mascota) {
         mascotas.add(mascota);
     }

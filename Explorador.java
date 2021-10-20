@@ -77,6 +77,11 @@
         return items;
     }
 
+    
+    
+    /** 
+     * @return int
+     */
     public int getTipo() {
         return 1;
     }
