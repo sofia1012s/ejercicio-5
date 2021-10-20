@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+
 public class Cazador extends Jugador {
 
     protected String nombreMascota;
     private Mascota mascota;
     private Jugador jugador;
+
+    private ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
 
     public Cazador(String nombre, int puntosVida, int poderAtaque, int turno, int items, String mascota) {
         super(nombre, puntosVida, poderAtaque, turno, items,3);
@@ -52,7 +56,7 @@ public class Cazador extends Jugador {
     public void atacar(Enemigo enemigo) {
         int vidaEnemigo = enemigo.getPuntosVida();
         vidaEnemigo = vidaEnemigo - poderAtaque;
-
+        Mascota mascota = getMascota();
         int ataque = mascota.getPoderAtaque();
         vidaEnemigo = vidaEnemigo - ataque;
 
@@ -66,12 +70,13 @@ public class Cazador extends Jugador {
         return items;
     }
 
-    public void setMascota(String nombreMascota) {
-        nombreMascota = this.nombreMascota;
+    public void setMascota(Mascota mascota) {
+        mascotas.add(mascota);
     }
 
-    public String getMascota() {
-        return nombreMascota;
+    public Mascota getMascota() {
+        
+        return mascotas.get(0);
     }
     
     public int getTipo() {
